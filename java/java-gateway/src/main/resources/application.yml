@@ -2,19 +2,31 @@ server:
   port: 8282
 
 spring:
+  application:
+    name: java-gateway #服务名称
+
   cloud:
     nacos:
       discovery:
-        server-addr: localhost:8848
+        server-addr: localhost:8848                       # nacos 服务器地址
+        service: ${spring.application.name}           # 注册到nacos的服务名
+
     gateway:
       discovery:
         locator:
-          #开启gateway从nacos上获取服务列表
-          enabled: false
+          enabled: true   # 开启从注册中心动态创建路由的功能，利用微服务名进行路由
 
-  application:
-    name: java-gateway
-  main:
-    allow-bean-definition-overriding: true
+      routes:
+        - id: java-feign                  # 路由id，保持唯一，尽量配合服务命名
+          uri: lb://java-feign  # 匹配后提供服务的路由地址
+          predicates:                 # 断言，路径匹配的进行路由
+            - Path=/feign/**
 
 
+logging:
+  level:
+    org.springframework.cloud.gateway: TRACE
+    org.springframework.http.server.reactive: DEBUG
+    org.springframework.web.reactive: DEBUG
+    reactor.ipc.netty: DEBUG
+    reactor.netty: DEBUG
