@@ -1,0 +1,20 @@
+server:
+  port: 8282
+
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+    gateway:
+      discovery:
+        locator:
+          #开启gateway从nacos上获取服务列表
+          enabled: false
+
+  application:
+    name: java-gateway
+  main:
+    allow-bean-definition-overriding: true
+
+

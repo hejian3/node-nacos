@@ -1,4 +1,4 @@
-package com.hj.nn.config;
+package com.hj.nn.feign.config;
 
 import feign.Logger;
 import feign.codec.Decoder;

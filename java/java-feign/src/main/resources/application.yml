@@ -11,8 +11,6 @@ spring:
     name: java-feign
   main:
     allow-bean-definition-overriding: true
-  profiles:
-    active: dev
 
 
 

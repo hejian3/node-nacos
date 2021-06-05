@@ -1,4 +1,4 @@
-package com.hj.nn.web;
+package com.hj.nn.feign.web;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
