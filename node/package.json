@@ -1,0 +1,29 @@
+{
+  "name": "node-nacos",
+  "version": "1.0.0",
+  "description": "node nacos example",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run lint && npm run test-local"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hejian3/node-nacos.git"
+  },
+  "keywords": [
+    "node",
+    "nacos"
+  ],
+  "author": "hejian",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/hejian3/node-nacos/issues"
+  },
+  "homepage": "https://github.com/hejian3/node-nacos#readme",
+  "dependencies": {
+    "nacos": "^2.1.1"
+  },
+  "devDependencies": {
+    "nacos": "^2.1.1"
+  }
+}

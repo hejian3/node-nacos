@@ -1,0 +1,18 @@
+server:
+  port: 8181
+
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+
+  application:
+    name: java-feign
+  main:
+    allow-bean-definition-overriding: true
+  profiles:
+    active: dev
+
+
+
