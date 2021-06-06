@@ -18,9 +18,16 @@ public class HelloController {
     @Autowired
     private NodeClient nodeClient;
 
-    @GetMapping("/hello")
-    public Mono<String> hello() {
+    @Autowired
+    private PythonClient pythonClient;
+
+    @GetMapping("/nodejs/hello")
+    public Mono<String> helloNode() {
         return Mono.just(nodeClient.hello());
     }
 
+    @GetMapping("/python/hello")
+    public Mono<String> helloPython() {
+        return Mono.just(pythonClient.hello());
+    }
 }
