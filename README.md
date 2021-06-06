@@ -59,9 +59,7 @@ node-nacos
 
 1. 启动Nacos服务 
 
-2. []: 
-
-   注册Node服务
+2. 注册Node服务
 
    ```javascript
    node ./node/serviceDiscovery.js
@@ -101,8 +99,12 @@ node-nacos
    curl http://localhost:8282/feign/python/hello
    ```
 
-
 ##### SDK资源
+
+[nacos-sdk-python](https://github.com/nacos-group/nacos-sdk-python)
+
+[nacos-sdk-nodejs](https://github.com/nacos-group/nacos-sdk-nodejs)
+
 
 [nacos-sdk-python]: https://github.com/nacos-group/nacos-sdk-python	"nacos-sdk-python"
 [nacos-sdk-nodejs]: https://github.com/nacos-group/nacos-sdk-nodejs	"nacos-sdk-nodejs"
